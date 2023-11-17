@@ -2,15 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package arutalalogic;
+package arutalalogic.logic56;
 
 import java.util.Scanner;
 
 /**
  *
- * @author elin
+ * @author elin <_.arifaah>
  */
-public class tes4 {
+public class bilangan {
 
     /**
      * @param args the command line arguments
@@ -19,17 +19,15 @@ public class tes4 {
         // TODO code application logic here
         Scanner scanner = new Scanner(System.in);
         int X = scanner.nextInt();
-        if (X < 0 || X > 100) {
-            System.out.println("X harus antara 0 dan 100");
+        int Y = scanner.nextInt();
+        
+        if ((X < 0 ||  X > 100)||(Y < 0 || Y > 100)) {
+            System.out.println("X dan Y harus antara 0 dan 100");
             return;
         }
-
-        // Menentukan apakah bilangan ganjil atau genap
-        if (X % 2 == 0) {
-            System.out.println("genap");
-        } else {
-            System.out.println("ganjil");
+        // Menampilkan bilangan bulat dari X hingga Y
+        for (int i = X; i <= Y; i++) {
+            System.out.print(i+"\n");
         }
     }
-    
 }

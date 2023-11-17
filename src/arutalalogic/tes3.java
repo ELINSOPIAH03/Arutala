@@ -19,8 +19,17 @@ public class tes3 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Masukkan biaya awal:");
         double biayaAwal = scanner.nextDouble();
+        
+        if (biayaAwal < 0 || biayaAwal > 150000) {
+            System.out.println("Biaya awal harus antara 0 sampai 15000");
+        }
+        
         System.out.println("Masukkan persen bunga:");
         double persenBunga = scanner.nextDouble();
+        
+        if (persenBunga < 0 || persenBunga > 100) {
+            System.out.println("Persen bunga harus antara 0 sampai 100");
+        }
 
         // Menghitung total biaya setelah bunga
         double totalBiaya = biayaAwal + (biayaAwal * (persenBunga / 100));
