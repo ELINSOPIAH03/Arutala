@@ -18,7 +18,12 @@ public class kelipatan3dan4 {
 
         //System.out.print("Masukkan sebuah bilangan: ");
         int bilangan = scanner.nextInt();
-
+        
+        if (bilangan < 0 || bilangan > 100) {
+            System.out.println("Bilangan harus antara 0 dan 100");
+            return;
+        }
+        
         int hasil = cekKelipatan(bilangan);
         System.out.println(hasil);
 

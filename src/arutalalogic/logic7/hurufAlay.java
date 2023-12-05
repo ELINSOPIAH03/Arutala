@@ -46,13 +46,22 @@ public class hurufAlay {
         }
         return alaySentence.toString();
     }
+    
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner scanner = new Scanner(System.in);
         String sentence = scanner.nextLine();
+        
+        if (isValidInput(sentence)) {
+            String alaySentence = translateToAlay(sentence);
+            System.out.println(alaySentence);
+        }else{
+             System.out.println("Input tidak valid. Panjang input melebihi 50 karakter.");
+        }
 
-        String alaySentence = translateToAlay(sentence);
-        System.out.println(alaySentence);
     }
     
+    private static boolean isValidInput(String input) {
+        return input.length() <= 50;
+    }
 }
