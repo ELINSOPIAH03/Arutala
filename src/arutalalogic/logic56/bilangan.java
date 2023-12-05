@@ -27,7 +27,7 @@ public class bilangan {
         }
         // Menampilkan bilangan bulat dari X hingga Y
         for (int i = X; i <= Y; i++) {
-            System.out.print(i+"\n");
+            System.out.print(i+" ");
         }
     }
 }

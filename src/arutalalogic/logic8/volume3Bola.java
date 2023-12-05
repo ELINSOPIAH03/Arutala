@@ -22,7 +22,16 @@ public class volume3Bola {
         int R2 = scanner.nextInt();
         int R3 = scanner.nextInt();
         double r = scanner.nextDouble();
-
+        
+        if (R1 < 0 || R1 > 100 && R2 < 0 || R2 > 100 && R3 < 0 || R3 > 100) {
+            System.out.println("R1 R2 R3 harus 0 - 100");
+            return;
+        }
+        
+        if (r < 0 || r > 99) {
+            System.out.println("Jari jari harus 0 - 99");
+            return;
+        }
         // Hitung jari-jari bola kedua dan ketiga
         double R2r = r * R2 / R1;
         double R3r = r * R3 / R1;
